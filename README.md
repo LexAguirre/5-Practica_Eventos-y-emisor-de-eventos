@@ -1,6 +1,6 @@
 ![Logo](img/ucol-logo.jpg)
 
-# Práctica 4: Module Patterns
+# Práctica 5: Eventos y emisor de eventos
 
 > Primera Parcial
 
@@ -17,30 +17,21 @@
 - Javascript Objects
 - Object literal
 
-> ENTREGA: DOMINGO 27 DE FEBRERO DEL 2022
+> ENTREGA: SABADO 12 DE MARZO DEL 2022
 
 ## INFORMACIÓN ADICIONAL
 
-Un módulo es un conjunto de código y de datos relacionados lógicamente. Encapsula (o encierra) detalles de la implementación (o sea, de la forma en cómo está escrito el código), de esta forma el que usa el módulo no necesita saber «cómo está hecho» el módulo, sino solamente «cómo se usa«. Y como sólo se necesita saber «cómo se usa» un módulo, lo único que se expone al mundo exterior es la forma de usarlo (tal como sucede con los paquetes que descargas de npmjs.com). Finalmente, combinando varios módulos se pueden crear aplicaciones mucho más grandes.
+Evento: algo que ha sucedido en nuestra app y que necesita una respuesta de nuestra parte.
 
-El código dentro de cada “módulo” es “self contained” y su ámbito de acceso es “protected”. No puedes acceder a ese código a menos que el módulo lo “exponga” de forma explícita mediante la función “module.exports’. El module.exports nos permite “exponer” cierto contenido de nuestro módulo a un ámbito diferente, de tal forma que se pueda tener acceso a sus funcionalidades desde cualquier otro módulo.
+En NODE hay dos tipos de eventos: System events (abrir un archivo, leer un archivo, crear un directorio, han llegado datos desde internet, etc) manejados mediante Libuv. Libuv is a C library that is used to abstract non-blocking I/O operations to a consistent interface across all supported platforms. It provides mechanisms to handle file system, DNS, network, child processes, pipes, signal handling, polling and streaming. It also includes a thread pool for offloading work for some things that can't be done asynchronously at the operating system level.
 
-> Javascript Objects
+y Custom events (eventos creados por el desarrollador para atender necesidades particulares) manejados por el Event Emitter. Aun asi, Javascript no tiene implementado el concepto de Event, no hay una clase como tal que los represente, pero nos proporciona el mecanismo para manejarlos
 
-Name/Value pairs: a name which maps to a value, the name may be defined more than once but only can have one value in any given context (The value may be another name/value pair).
-
-Un Javascript Object es: a collection of name value pairs
-Que puede contener un objeto:
-
-- Datos primitivos
-- Funciones (method)
-- Otros objetos
-
-Object literal: Name/value pair separated by colons and surrounded by curly braces
+Accediendo a las “keys” de un object literal en Javascript
 
 ## EXPLICACIÓN DEL PROCESO
 
-1. Crear nuevo directorio “modules”
+1. Crear nuevo directorio “events”
 
 2. Crear un nuevo archivo app.js
 
