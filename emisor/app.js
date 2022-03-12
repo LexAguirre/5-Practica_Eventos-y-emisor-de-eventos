@@ -20,5 +20,5 @@ emtr.on("jump", () => {
   console.log("someone jumped!");
 });
 
-console.log(emtr); //ejecutamos todo el emtr
+console.log(emtr); //ejecutamos todo el emtr el cual tiene la forma de un objeto
 emtr.emit("jump"); //ejecutamos el jump del Emitter
