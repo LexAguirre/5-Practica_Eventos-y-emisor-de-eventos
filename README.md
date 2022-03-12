@@ -31,56 +31,58 @@ Accediendo a las “keys” de un object literal en Javascript
 
 ## EXPLICACIÓN DEL PROCESO
 
-1. Crear nuevo directorio “events”
+1. Crear nuevo directorio llamado “events”
 
-2. Crear un nuevo archivo app.js
+2. Crear un nuevo archivo llamado app.js
 
-3. Crear un nuevo archivo greet.js
+3. Crea un objeto llamado obj que contenga el nombre, edad y apellido
 
-4. Escribir "console.log("Hello from the module");" en el archivo greet.js y deja el archivo app.js vacío
+4. Ahora imprime el nombre que se encuentra en el obj de la manera antes vista y tambien colocando obj y entre corchete colocar el string del elemento a imprimir del objeto (obj["nombre"])
 
-5. Ahora en la línea de comando ejecuta "node app" y observa lo ocurrido
+5. Ahora crea una variable con el nombre del elemento del objeto a imprimir
 
-6. Ahora convierte el saludo del archivo greet.js
+6. Realiza lo mismo de imprimir el elemento de un objeto colocandolo entre corchetes [] pero en lugar de escribir el nombre del elemento se colocara la variable
 
-7. En app.js agregar la cláusula requiere del archivo greet.js
+7. En el obj ahora coloca dos funciones una llamada keypress la cual imrpimira 'Se ha precionado una tecla' y la otra llamada mouseOver la cual debera imprimir 'El puntero del mouse esta arriba'
 
-8. En la línea de comando ejecuta "node app" y observa lo ocurrido
+8. Ahora realiza lo mismo que en el paso 7 pero imprime las dos funciones que fueron agregadas al objeto
 
-9. Manda llamar la función "greet();" en el archivo app.js
+9. Lo siguiente sera revisar el manejo de arrays por lo cual se creara un nuevo array llamado myArray en el cual se le empujara cuatro elementos de diferentes tipos demostrando asi que sin importar el tipo de elemento este sigue manteniendo sus caracteristicas dentro del array
 
-10. En la línea de comando ejecuta "node app" y observa lo ocurrido
+10. Los cuatro elementos a ingresar seran:un number, string, un objeto(obj el cual se trabajo anteriormente) y una función (anonima / sin nombre)
 
-11. Ahora la capsula requiere convertirla en una variable
+11. Imprime el array y observa los tipos de todos los elementos
 
-12. En el archivo greet.js en se colocará un "module.export = greet" para que pueda tener acceso al código del archivo greet.js
+12. Imprime la funcion mouseOver que se encuentra en el objeto pero desde el array y explica como hacerlo
 
-13. En la línea de comando ejecuta "node app" y observa lo ocurrido
+13. Imprime la funcion anonima que se encuentra en el array y explica como hacerlo
 
-14. Para la siguiente parte Se creará un nuevo directorio llamado "Objects" al mismo nivel de "Modules"
+14. Lo siguiente sera crear un array llamado funcArray y empujarle 3 funciones anonimas las cuales contendra la funcion de imprimir funcion 1, funcion 2, funcion 3 cada una en una respectiva funcion.
 
-15. Dentro del nuevo directorio crear un archivo llamado app.js
+15. Ahora ejecuta un forEach en el array recien creado para que ejecute todas lad funciones del array
 
-16. Dentro del nuevo archivo app.js se creará un objeto vacío
+16. Crear nuevo directorio llamado “emisor”
 
-17. En la línea de comando ejecuta "node app" y observa lo ocurrido
+17. Crear un nuevo archivo llamado emiter.js
 
-18. Ahora se modificará el objeto llamándolo personal y colocando en su interior el nombre y apellido de una persona, además después de crear el objeto se imprimirá todo el objeto
+18. Dentro del emiter se creará un contructor el cual contrendra un objeto vacio
 
-19. En la línea de comando ejecuta "node app" y observa lo ocurrido
+19. Despues se crea una funcion que tenda prototype y que se llame on en esta crearemos un codigo el cual se encarge de inspecionar el objeto y revisar si contiene algo sino crea un array para que pueda contener algo esta funcion debera recibir dos valores type y listener, ahora despues de ver si existe o crear un array este empujara lo del listener al array
 
-20. Ahora solo se imprimirá el campo nombre y apellido por separado
+20. Ahora se debera crear una funcion la cual se llame emit se ejecutara un forEach al array que se busca
 
-21. En la línea de comando ejecuta "node app" y observa lo ocurrido
+21. Exporta el modulo emitter para que pueda ser utilizado en otros archivos
 
-22. Para continuar se creará una función que regrese un string que contenga el nombre y apellido que está en el objeto, además de imprimir el resultado
+22. Crear un nuevo archivo llamado app.js
 
-23. En la línea de comando ejecuta "node app" y observa lo ocurrido
+23. En el app se ejecuta un require del emmiter y se crea una nueva instancia de este
 
-24. Ahora coloca el campo domicilio en la cual se le colocaran más subcampos los cuales son calle, colonia. cp, municipio.
+24. Crea dos funciones con el on del emtr con el mismo nombre pero diferente contenido a imprimir y luego elecuta greet en la funcion emit del emtr
 
-25. Imprime el campo domicilio y en la consola coloca "node app"
+25. Ahora realiza otra funcion llamada jump y imprimela
 
-26. Por último desarrolla una función que contenga todos los subcampos de domicilio como string e imprime el resultado
+26. Imprime el emtr y observa como se estructura
 
 ## REFERENCIAS
+
+https://www.w3schools.com/jsref/jsref_foreach.asp
